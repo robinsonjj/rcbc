@@ -88,7 +88,7 @@ SEXP rcbc_cpp_cbc_solve(SEXP obj,
   }
 
   // set up model
-  CbcMain1(nArgs, argList.data(), model);
+  CbcMain1(nArgs, argList.data(), model, solverData);
 
   // generate solution
   SEXP solution = Rf_protect(Rf_allocVector(REALSXP, nCols));
