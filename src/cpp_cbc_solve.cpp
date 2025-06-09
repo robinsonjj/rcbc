@@ -49,7 +49,8 @@ SEXP rcbc_cpp_cbc_solve(SEXP obj,
 
   // create model
   CbcModel model(solver);
-  CbcMain0(model);
+  CbcSolverUsefulData solverData;
+  CbcMain0(model, solverData);
 
   // set initial solution if specified
   /// declare variable to specify initial solution
